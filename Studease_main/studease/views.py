@@ -1,13 +1,11 @@
 from django.shortcuts import render,HttpResponse,redirect
 #added manually
 from datetime import datetime
-from studease.models import contact
 #added manually to display allert messages..
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.contrib.auth import logout,login
-
 #It is the main index page
 def index(request):
     #variable can be sent through this method..
