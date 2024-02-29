@@ -9,3 +9,10 @@ class contact(models.Model):
 
     def __str__(self):
         return self.name
+
+class loginDetails(models.Model):
+    username = models.CharField(max_length=122,default='')
+    password = models.CharField(max_length=122,default='')
+
+    def __str__(self):
+        return self.username

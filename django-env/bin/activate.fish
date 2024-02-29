@@ -29,7 +29,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/udaynarwal/Desktop/StudEase Website/django-env"
+set -gx VIRTUAL_ENV "/Users/udaynarwal/Desktop/studease-main/django-env"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

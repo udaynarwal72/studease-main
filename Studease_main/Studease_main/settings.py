@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-z_6l-!hxh)+oy9)!^8rl)xu6l!!w_2n=1m9es(xr@ny69mr-9f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['studease.com','127.0.0.1']
 
 
 # Application definition
@@ -120,7 +120,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-#Added manually
+#Added manually  to set static dirs
 STATICFILES_DIRS = [
     BASE_DIR / "static",
     "/var/www/static/",

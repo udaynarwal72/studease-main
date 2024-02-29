@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-
+from studease import views
 urlpatterns = [
-    path('',include('Studease_main.urls')),
+    path('',views.index,name="index"),
+    path('login',views.loginUser, name="login"), 
+    path('logout',views.logoutUser, name="logout")
 ]
