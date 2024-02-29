@@ -7,6 +7,8 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.contrib.auth import logout,login
+
+#It is the main index page
 def index(request):
     #variable can be sent through this method..
     #context is a dictonary of variables
@@ -48,3 +50,27 @@ def loginUser(request):
 def logoutUser(request):
     logout(request)
     return redirect("/login")
+
+#It is used to create user in DATA BASE
+def signUpUser(request):
+    if request.method == 'POST':
+        # Get the post parameters
+        username = request.POST.get('username')
+        fname = request.POST.get('fname')
+        lname = request.POST.get('lname')
+        email = request.POST.get('email')
+        pass1 = request.POST.get('pass1')
+        pass2 = request.POST.get('pass2')
+        # check for erroneous input
+        #
+        # create the user
+        myuser = User.objects.create_user(username, email, pass1)
+        myuser.first_name = fname
+        myuser.last_name = lname
+        myuser.save()
+        print(myuser.username)
+        print(myuser.first_name)
+        print(myuser.last_name)
+        print(myuser.email)
+        messages.success(request, "Your account has successfully created")
+    return render(request, 'signup.html')
