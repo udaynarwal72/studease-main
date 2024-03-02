@@ -82,6 +82,9 @@ DATABASES = {
     }
 }
 
+#linking mysql data base
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -122,7 +125,6 @@ STATIC_URL = 'static/'
 #Added manually  to set static dirs
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    "/var/www/static/",
 ]
 
 # Default primary key field type

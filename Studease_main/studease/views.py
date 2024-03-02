@@ -28,7 +28,7 @@ def index(request):
 #we use HttpResponse to render string directly..
 def loginUser(request):
     if request.method =="POST":
-        username =request.POST.get('username')
+        username = request.POST.get('username')
         password = request.POST.get('password')
         #check if user has entered correct credentials
         print(username,password)
